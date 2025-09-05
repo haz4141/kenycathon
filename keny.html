@@ -1,0 +1,1284 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keny the Sarawak Hornbill</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'AlibabaSans-Bold';
+            src: url('https://assets-persist.lovart.ai/agent-static-assets/Alibaba-PuHuiTi-Bold.otf') format('opentype');
+            font-weight: bold;
+        }
+        
+        @font-face {
+            font-family: 'AlibabaSans-Regular';
+            src: url('https://assets-persist.lovart.ai/agent-static-assets/AlibabaSans-Regular.otf') format('opentype');
+            font-weight: normal;
+        }
+        
+        @font-face {
+            font-family: 'MiSans-Medium';
+            src: url('https://assets-persist.lovart.ai/agent-static-assets/MiSans-Medium.ttf') format('truetype');
+            font-weight: 500;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'AlibabaSans-Regular', sans-serif;
+            color: #333;
+            overflow-x: hidden;
+            background-color: #f9f7f2;
+            width: 1920px;
+        }
+        
+        .container {
+            width: 1920px;
+            overflow: hidden;
+        }
+        
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 1920px;
+            background-color: rgba(12, 35, 64, 0.9);
+            padding: 20px 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+        
+        .logo {
+            color: #fff;
+            font-family: 'AlibabaSans-Bold', sans-serif;
+            font-size: 28px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo i {
+            color: #FF6B35;
+            margin-right: 10px;
+            font-size: 32px;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin: 0 20px;
+        }
+        
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            font-family: 'MiSans-Medium', sans-serif;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #FF6B35;
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            width: 1920px;
+            background: linear-gradient(135deg, #0C2340 0%, #1A3A5F 100%);
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            width: 50%;
+            padding-left: 150px;
+            z-index: 2;
+        }
+        
+        .hero h1 {
+            font-family: 'AlibabaSans-Bold', sans-serif;
+            font-size: 72px;
+            color: #fff;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+        
+        .hero h1 span {
+            color: #FF6B35;
+        }
+        
+        .hero p {
+            font-size: 22px;
+            color: #e0e0e0;
+            margin-bottom: 40px;
+            line-height: 1.6;
+            max-width: 600px;
+        }
+        
+        .hero-btn {
+            display: inline-block;
+            background-color: #FF6B35;
+            color: #fff;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-family: 'MiSans-Medium', sans-serif;
+            text-decoration: none;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+        
+        .hero-btn:hover {
+            transform: translateY(-5px);
+            background-color: #e55a2b;
+        }
+        
+        .hero-image {
+            position: absolute;
+            right: 100px;
+            bottom: 0;
+            width: 533px;
+            height: 559px;
+            z-index: 1;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .pattern-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.1;
+            z-index: 0;
+        }
+        
+        /* Animation Concept Section */
+        .animation-concept {
+            padding: 120px 150px;
+            background-color: #fff;
+            position: relative;
+        }
+        
+        .section-title {
+            font-family: 'AlibabaSans-Bold', sans-serif;
+            font-size: 48px;
+            color: #0C2340;
+            margin-bottom: 50px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 5px;
+            background-color: #FF6B35;
+        }
+        
+        .concept-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .concept-text {
+            width: 50%;
+            padding-right: 50px;
+        }
+        
+        .concept-text h3 {
+            font-family: 'MiSans-Medium', sans-serif;
+            font-size: 32px;
+            color: #0C2340;
+            margin-bottom: 25px;
+        }
+        
+        .concept-text p {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        
+        .concept-features {
+            margin-top: 40px;
+        }
+        
+        .feature {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+        
+        .feature i {
+            font-size: 24px;
+            color: #FF6B35;
+            margin-right: 15px;
+            background-color: rgba(255, 107, 53, 0.1);
+            padding: 12px;
+            border-radius: 50%;
+        }
+        
+        .feature-text h4 {
+            font-family: 'MiSans-Medium', sans-serif;
+            font-size: 20px;
+            margin-bottom: 5px;
+            color: #0C2340;
+        }
+        
+        .feature-text p {
+            font-size: 16px;
+            margin-bottom: 0;
+        }
+        
+        .concept-visual {
+            width: 45%;
+            position: relative;
+        }
+        
+        .concept-frame {
+            width: 100%;
+            height: 500px;
+            background-color: #0C2340;
+            border-radius: 20px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        .concept-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(12, 35, 64, 0.9) 0%, rgba(255, 107, 53, 0.4) 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            color: #fff;
+            text-align: center;
+        }
+        
+        .concept-overlay h3 {
+            font-family: 'AlibabaSans-Bold', sans-serif;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .concept-overlay p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        
+        .sarawak-pattern {
+            position: absolute;
+            bottom: -50px;
+            right: -50px;
+            width: 200px;
+            height: 200px;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23FF6B35' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+            z-index: 0;
+        }
+        
+        /* Character Profile Section */
+        .character-profile {
+            padding: 120px 150px;
+            background-color: #f9f7f2;
+            position: relative;
+        }
+        
+        .profile-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .profile-image {
+            width: 45%;
+            position: relative;
+        }
+        
+        .profile-image img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .profile-image:before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            width: 100px;
+            height: 100px;
+            background-color: #FF6B35;
+            z-index: -1;
+            border-radius: 10px;
+        }
+        
+        .profile-image:after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            width: 150px;
+            height: 150px;
+            background-color: #0C2340;
+            z-index: -1;
+            border-radius: 10px;
+        }
+        
+        .profile-text {
+            width: 50%;
+            padding-left: 80px;
+        }
+        
+        .profile-text h3 {
+            font-family: 'AlibabaSans-Bold', sans-serif;
+            font-size: 36px;
+            color: #0C2340;
+            margin-bottom: 30px;
+        }
+        
+        .profile-text p {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+        
+        .profile-stats {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+        
+        .stat {
+            width: 50%;
+            margin-bottom: 30px;
+        }
+        
+        .stat h4 {
+            font-family: 'MiSans-Medium', sans-serif;
+            font-size: 18px;
+            color: #FF6B35;
+            margin-bottom: 5px;
+        }
+        
+        .stat p {
+            font-size: 16px;
+            margin-bottom: 0;
+        }
+        
+        /* Cultural Symbolism Section */
+        .cultural-symbolism {
+            padding: 120px 150px;
+            background-color: #0C2340;
+            color: #fff;
+            position: relative;
+        }
+        
+        .cultural-symbolism .section-title {
+            color: #fff;
+        }
+        
+        .symbolism-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 60px;
+            margin-top: 80px;
+        }
+        
+        .symbolism-item {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 40px;
+            transition: transform 0.3s;
+        }
+        
+        .symbolism-item:hover {
+            transform: translateY(-10px);
+        }
+        
+        .symbolism-icon {
+            font-size: 48px;
+            color: #FF6B35;
+            margin-bottom: 25px;
+        }
+        
+        .symbolism-item h3 {
+            font-family: 'MiSans-Medium', sans-serif;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        
+        .symbolism-item p {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        
+        .symbolism-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.1;
+            z-index: 0;
+        }
+        
+        /* Emotional Appeal Section */
+        .emotional-appeal {
+            padding: 120px 150px;
+            background-color: #fff;
+            position: relative;
+        }
+        
+        .appeal-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .appeal-quote {
+            font-family: 'AlibabaSans-Bold', sans-serif;
+            font-size: 36px;
+            color: #0C2340;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 60px;
+            line-height: 1.4;
+            position: relative;
+        }
+        
+        .appeal-quote:before {
+            content: '"';
+            font-size: 120px;
+            color: rgba(255, 107, 53, 0.1);
+            position: absolute;
+            top: -60px;
+            left: -40px;
+        }
+        
+        .appeal-quote:after {
+            content: '"';
+            font-size: 120px;
+            color: rgba(255, 107, 53, 0.1);
+            position: absolute;
+            bottom: -100px;
+            right: -40px;
+        }
+        
+        .appeal-cards {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-top: 80px;
+        }
+        
+        .appeal-card {
+            width: 30%;
+            background-color: #f9f7f2;
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+        }
+        
+        .appeal-card:hover {
+            transform: translateY(-15px);
+        }
+        
+        .appeal-card i {
+            font-size: 48px;
+            color: #FF6B35;
+            margin-bottom: 25px;
+        }
+        
+        .appeal-card h3 {
+            font-family: 'MiSans-Medium', sans-serif;
+            font-size: 24px;
+            color: #0C2340;
+            margin-bottom: 20px;
+        }
+        
+        .appeal-card p {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        
+        /* Market Positioning Section */
+        .market-positioning {
+            padding: 120px 150px;
+            background-color: #f9f7f2;
+            position: relative;
+        }
+        
+        .positioning-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .positioning-text {
+            width: 45%;
+        }
+        
+        .positioning-text h3 {
+            font-family: 'AlibabaSans-Bold', sans-serif;
+            font-size: 36px;
+            color: #0C2340;
+            margin-bottom: 30px;
+        }
+        
+        .positioning-text p {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+        
+        .positioning-chart {
+            width: 50%;
+            height: 500px;
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            position: relative;
+        }
+        
+        .chart-title {
+            font-family: 'MiSans-Medium', sans-serif;
+            font-size: 24px;
+            color: #0C2340;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .chart-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 20px;
+            height: calc(100% - 70px);
+        }
+        
+        .chart-quadrant {
+            background-color: rgba(255, 107, 53, 0.05);
+            border-radius: 10px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .chart-quadrant.active {
+            background-color: rgba(255, 107, 53, 0.2);
+            border: 2px solid #FF6B35;
+        }
+        
+        .chart-quadrant h4 {
+            font-family: 'MiSans-Medium', sans-serif;
+            font-size: 18px;
+            color: #0C2340;
+            margin-bottom: 15px;
+        }
+        
+        .chart-quadrant p {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        .chart-quadrant i {
+            font-size: 32px;
+            color: #FF6B35;
+            margin-bottom: 15px;
+        }
+        
+        /* Merchandise Section */
+        .merchandise {
+            padding: 120px 150px;
+            background-color: #0C2340;
+            color: #fff;
+            position: relative;
+        }
+        
+        .merchandise .section-title {
+            color: #fff;
+        }
+        
+        .merchandise-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .merchandise-text {
+            width: 45%;
+        }
+        
+        .merchandise-text h3 {
+            font-family: 'AlibabaSans-Bold', sans-serif;
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+        
+        .merchandise-text p {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 40px;
+        }
+        
+        .merchandise-btn {
+            display: inline-block;
+            background-color: #FF6B35;
+            color: #fff;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-family: 'MiSans-Medium', sans-serif;
+            text-decoration: none;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+        
+        .merchandise-btn:hover {
+            transform: translateY(-5px);
+            background-color: #e55a2b;
+        }
+        
+        .merchandise-showcase {
+            width: 50%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        
+        .merchandise-item {
+            width: 48%;
+            position: relative;
+        }
+        
+        .merchandise-item img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .merchandise-badge {
+            position: absolute;
+            top: -30px;
+            right: -30px;
+            background-color: #FF6B35;
+            color: #fff;
+            font-family: 'MiSans-Medium', sans-serif;
+            padding: 15px 25px;
+            border-radius: 50px;
+            font-size: 18px;
+            transform: rotate(15deg);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #0A1C30;
+            padding: 80px 150px 40px;
+            color: #fff;
+        }
+        
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 60px;
+        }
+        
+        .footer-logo {
+            width: 30%;
+        }
+        
+        .footer-logo h2 {
+            font-family: 'AlibabaSans-Bold', sans-serif;
+            font-size: 28px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .footer-logo h2 i {
+            color: #FF6B35;
+            margin-right: 10px;
+        }
+        
+        .footer-logo p {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #ccc;
+        }
+        
+        .footer-links {
+            width: 20%;
+        }
+        
+        .footer-links h3 {
+            font-family: 'MiSans-Medium', sans-serif;
+            font-size: 20px;
+            margin-bottom: 25px;
+            color: #fff;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 15px;
+        }
+        
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: #FF6B35;
+        }
+        
+        .footer-contact {
+            width: 30%;
+        }
+        
+        .footer-contact h3 {
+            font-family: 'MiSans-Medium', sans-serif;
+            font-size: 20px;
+            margin-bottom: 25px;
+            color: #fff;
+        }
+        
+        .contact-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .contact-info i {
+            font-size: 20px;
+            color: #FF6B35;
+            margin-right: 15px;
+        }
+        
+        .contact-info p {
+            font-size: 16px;
+            color: #ccc;
+            margin: 0;
+        }
+        
+        .social-links {
+            display: flex;
+            margin-top: 30px;
+        }
+        
+        .social-links a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            margin-right: 15px;
+            transition: background-color 0.3s;
+        }
+        
+        .social-links a:hover {
+            background-color: #FF6B35;
+        }
+        
+        .social-links i {
+            font-size: 18px;
+            color: #fff;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 30px;
+            text-align: center;
+        }
+        
+        .footer-bottom p {
+            font-size: 14px;
+            color: #999;
+        }
+        
+        /* Traditional Patterns */
+        .traditional-pattern-1 {
+            position: absolute;
+            top: 50px;
+            right: 50px;
+            width: 150px;
+            height: 150px;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23FF6B35' fill-opacity='0.2'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        
+        .traditional-pattern-2 {
+            position: absolute;
+            bottom: 50px;
+            left: 50px;
+            width: 200px;
+            height: 200px;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%230C2340' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+
+        /* Animations */
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-12px); }
+            100% { transform: translateY(0); }
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: none;
+        }
+
+        /* Animated cards for showcase */
+        .merchandise-showcase .merchandise-item {
+            background-color: rgba(255, 255, 255, 0.03);
+            border-radius: 20px;
+            overflow: hidden;
+            perspective: 800px;
+            transform-style: preserve-3d;
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
+        }
+
+        .merchandise-showcase .merchandise-item:hover {
+            transform: translateY(-8px) rotateX(2deg) rotateY(-2deg);
+            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+        }
+
+        .merchandise-showcase .merchandise-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -150%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(120deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.22) 50%, rgba(255,255,255,0) 100%);
+            transform: skewX(-20deg);
+            transition: transform 0.6s ease;
+            pointer-events: none;
+        }
+
+        .merchandise-showcase .merchandise-item:hover::before {
+            transform: translateX(450%) skewX(-20deg);
+        }
+
+        .merchandise-showcase .merchandise-item img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .merchandise-badge {
+            animation: badgePulse 2.4s ease-in-out infinite;
+        }
+
+        @keyframes badgePulse {
+            0%, 100% { transform: rotate(15deg) scale(1); }
+            50% { transform: rotate(15deg) scale(1.06); }
+        }
+
+        .section-title {
+            animation: titleGlow 6s ease-in-out infinite;
+        }
+
+        @keyframes titleGlow {
+            0%, 100% { text-shadow: 0 0 0 rgba(255, 107, 53, 0); }
+            50% { text-shadow: 0 0 18px rgba(255, 107, 53, 0.25); }
+        }
+
+        .symbolism-item, .appeal-card, .chart-quadrant, .feature {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .symbolism-item:hover, .appeal-card:hover, .chart-quadrant:hover, .feature:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation -->
+        <nav>
+            <div class="logo">
+                <i class="ri-feather-fill"></i>
+                <span>Keny the Hornbill</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#animation">Animation</a></li>
+                <li><a href="#character">Character</a></li>
+                <li><a href="#culture">Culture</a></li>
+                <li><a href="#merchandise">Merchandise</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="pattern-overlay"></div>
+            <div class="hero-content">
+                <h1>Meet <span>Keny</span>,<br>Sarawak's Guardian Spirit</h1>
+                <p>A vibrant ambassador and cultural icon bringing the rich heritage and natural beauty of Sarawak to life through adventure and storytelling.</p>
+                <a href="#character" class="hero-btn">Discover Keny</a>
+            </div>
+            <img src="https://assets-temp.lovart.ai/img/f9ebb4b21df045a3ba522299f0fb9368/e44c664d3719908254fbdf39e62c8a356b02b0efdf8f20bd9456bcc00a15b69c.png" alt="Keny the Sarawak Hornbill" class="hero-image">
+        </section>
+        
+        <!-- Animation Concept Section -->
+        <section class="animation-concept" id="animation">
+            <div class="traditional-pattern-1"></div>
+            <h2 class="section-title">Animation Concept</h2>
+            <div class="concept-container">
+                <div class="concept-text">
+                    <h3>Guiding Adventures Through Sarawak</h3>
+                    <p>In our animated series, Keny serves as a knowledgeable and enthusiastic guide, leading tourists through the diverse landscapes and rich cultural heritage of Sarawak. With his captain's hat and friendly demeanor, Keny embodies the spirit of adventure and discovery.</p>
+                    <p>Each episode follows Keny as he introduces visitors to different aspects of Sarawak's beauty, from the lush rainforests to vibrant cultural festivals and historical landmarks.</p>
+                    
+                    <div class="concept-features">
+                        <div class="feature">
+                            <i class="ri-map-pin-line"></i>
+                            <div class="feature-text">
+                                <h4>Cultural Exploration</h4>
+                                <p>Keny introduces traditional dances, crafts, and ceremonies of Sarawak's indigenous communities.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature">
+                            <i class="ri-plant-line"></i>
+                            <div class="feature-text">
+                                <h4>Nature Adventures</h4>
+                                <p>Journey through rainforests, caves, and rivers, showcasing Sarawak's biodiversity.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature">
+                            <i class="ri-history-line"></i>
+                            <div class="feature-text">
+                                <h4>Historical Stories</h4>
+                                <p>Discover the rich history of Sarawak through engaging narratives and historical sites.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="concept-visual">
+                    <div class="concept-frame">
+                        <video src="https://assets-persist.lovart.ai/agent_images/b3e64bf0-64d1-46fd-b04f-c9fa7fad4326.mp4" controls playsinline style="width: 100%; height: 100%; object-fit: cover;"></video>
+                    </div>
+                </div>
+            </div>
+            <div class="sarawak-pattern"></div>
+        </section>
+        
+        <!-- Character Profile Section -->
+        <section class="character-profile" id="character">
+            <h2 class="section-title">Character Profile</h2>
+            <div class="profile-container">
+                <div class="profile-image">
+                    <img src="https://assets-temp.lovart.ai/img/f9ebb4b21df045a3ba522299f0fb9368/e44c664d3719908254fbdf39e62c8a356b02b0efdf8f20bd9456bcc00a15b69c.png" alt="Keny the Sarawak Hornbill">
+                </div>
+                
+                <div class="profile-text">
+                    <h3>The Story of Keny</h3>
+                    <p>Born in the heart of Sarawak's ancient rainforests, Keny is a hornbill who has dedicated his life to preserving and sharing the cultural heritage of his homeland. As a descendant of the revered hornbills that have long been sacred to the indigenous peoples of Borneo, Keny carries the wisdom of generations.</p>
+                    <p>After years of observing tourists struggling to fully experience the true essence of Sarawak, Keny decided to become a guide, using his knowledge and charismatic personality to create meaningful connections between visitors and the land he loves.</p>
+                    <p>With his distinctive captain's hat and traditional patterned scarf, Keny has become a beloved figure throughout Sarawak, known for his storytelling abilities and his passion for cultural preservation.</p>
+                    
+                    <div class="profile-stats">
+                        <div class="stat">
+                            <h4>Personality</h4>
+                            <p>Friendly, knowledgeable, enthusiastic</p>
+                        </div>
+                        
+                        <div class="stat">
+                            <h4>Special Skills</h4>
+                            <p>Storytelling, navigation, cultural knowledge</p>
+                        </div>
+                        
+                        <div class="stat">
+                            <h4>Favorite Saying</h4>
+                            <p>"Adventure awaits in every corner of Sarawak!"</p>
+                        </div>
+                        
+                        <div class="stat">
+                            <h4>Mission</h4>
+                            <p>To share and preserve Sarawak's cultural heritage</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Cultural Symbolism Section -->
+        <section class="cultural-symbolism" id="culture">
+            <div class="symbolism-pattern"></div>
+            <h2 class="section-title">Cultural Symbolism</h2>
+            <div class="symbolism-grid">
+                <div class="symbolism-item">
+                    <div class="symbolism-icon">
+                        <i class="ri-feather-fill"></i>
+                    </div>
+                    <h3>The Sacred Hornbill</h3>
+                    <p>In Sarawak's indigenous cultures, particularly among the Iban and Orang Ulu communities, the hornbill is considered a sacred bird representing the upper world. Keny embodies this spiritual significance, connecting visitors to the deeper cultural meanings and beliefs of Sarawak's people.</p>
+                </div>
+                
+                <div class="symbolism-item">
+                    <div class="symbolism-icon">
+                        <i class="ri-palette-line"></i>
+                    </div>
+                    <h3>Traditional Patterns</h3>
+                    <p>Keny's red scarf features authentic Sarawak patterns inspired by traditional textiles like Pua Kumbu. These intricate designs tell stories of community, nature, and spiritual beliefs, representing the artistic heritage that has been passed down through generations.</p>
+                </div>
+                
+                <div class="symbolism-item">
+                    <div class="symbolism-icon">
+                        <i class="ri-ship-line"></i>
+                    </div>
+                    <h3>Captain's Hat Symbolism</h3>
+                    <p>Keny's captain's hat represents leadership and guidance, reflecting Sarawak's rich maritime history and the importance of rivers as lifelines for communities. It symbolizes Keny's role as a trusted guide navigating visitors through both physical landscapes and cultural experiences.</p>
+                </div>
+                
+                <div class="symbolism-item">
+                    <div class="symbolism-icon">
+                        <i class="ri-earth-line"></i>
+                    </div>
+                    <h3>Environmental Guardian</h3>
+                    <p>As a hornbill, Keny represents Sarawak's commitment to biodiversity conservation. Hornbills are indicator species whose presence reflects the health of the forest ecosystem. Through Keny, we promote awareness of Sarawak's natural treasures and the importance of preserving them.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Emotional Appeal Section -->
+        <section class="emotional-appeal">
+            <div class="traditional-pattern-2"></div>
+            <h2 class="section-title">Emotional Connection</h2>
+            <div class="appeal-container">
+                <div class="appeal-quote">
+                    "Through Keny, visitors don't just see Sarawak—they experience its heart and soul, creating memories that last a lifetime."
+                </div>
+                
+                <div class="appeal-cards">
+                    <div class="appeal-card">
+                        <i class="ri-heart-line"></i>
+                        <h3>Nostalgia & Wonder</h3>
+                        <p>Keny evokes the childlike wonder of discovery while honoring the nostalgia of traditional storytelling, creating an emotional bridge between past and present that resonates with both children and adults.</p>
+                    </div>
+                    
+                    <div class="appeal-card">
+                        <i class="ri-group-line"></i>
+                        <h3>Cultural Pride</h3>
+                        <p>For locals, Keny represents pride in Sarawak's heritage and traditions. For visitors, he creates meaningful connections to the land and its people, fostering respect and appreciation for cultural diversity.</p>
+                    </div>
+                    
+                    <div class="appeal-card">
+                        <i class="ri-compass-discover-line"></i>
+                        <h3>Spirit of Adventure</h3>
+                        <p>Keny embodies the thrill of exploration and the joy of unexpected discoveries, inspiring travelers to venture beyond the ordinary and embrace authentic experiences with open hearts.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Market Positioning Section -->
+        <section class="market-positioning">
+            <h2 class="section-title">Market Positioning</h2>
+            <div class="positioning-container">
+                <div class="positioning-text">
+                    <h3>Strategic Brand Positioning</h3>
+                    <p>Keny is positioned as the premier cultural ambassador for Sarawak tourism, filling a gap in the market for authentic, character-driven destination branding. Unlike generic tourism mascots, Keny offers a deep connection to the cultural and natural heritage of the region.</p>
+                    <p>By combining educational content with entertaining storytelling, Keny appeals to both family travelers seeking enriching experiences for their children and cultural enthusiasts looking for authentic engagement with local traditions.</p>
+                    <p>The character's distinctive design and meaningful symbolism create strong brand recognition, while his adaptability allows for integration across multiple platforms—from digital content to physical merchandise and tourism experiences.</p>
+                </div>
+                
+                <div class="positioning-chart">
+                    <div class="chart-title">Keny's Market Differentiation</div>
+                    <div class="chart-grid">
+                        <div class="chart-quadrant">
+                            <i class="ri-global-line"></i>
+                            <h4>Global Appeal</h4>
+                            <p>Designed to resonate with international tourists while maintaining authentic cultural roots</p>
+                        </div>
+                        
+                        <div class="chart-quadrant active">
+                            <i class="ri-heart-3-line"></i>
+                            <h4>Cultural Authenticity</h4>
+                            <p>Deeply connected to Sarawak's heritage with meaningful symbolism and storytelling</p>
+                        </div>
+                        
+                        <div class="chart-quadrant">
+                            <i class="ri-user-smile-line"></i>
+                            <h4>Family Friendly</h4>
+                            <p>Appealing character design that engages children while educating all ages</p>
+                        </div>
+                        
+                        <div class="chart-quadrant">
+                            <i class="ri-store-line"></i>
+                            <h4>Merchandising Potential</h4>
+                            <p>Distinctive design translates well to various product categories</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Merchandise Section -->
+        <section class="merchandise" id="merchandise">
+            <h2 class="section-title">Merchandise Showcase</h2>
+            <div class="merchandise-container">
+                <div class="merchandise-text">
+                    <h3>Bringing Keny Home</h3>
+                    <p>Our carefully crafted merchandise line allows visitors to take a piece of Sarawak's spirit home with them. Each item is designed with attention to detail and cultural authenticity, creating meaningful souvenirs that tell the story of Keny and Sarawak.</p>
+                    <p>The flagship item in our collection is the Keny enamel brooch—a beautifully crafted piece featuring our beloved hornbill in his signature captain's hat and traditional scarf. Made with high-quality materials and featuring a glossy enamel finish, this collectible item serves as both a fashion accessory and a cherished memento of Sarawak.</p>
+                    <a href="#" class="merchandise-btn">Explore Collection</a>
+                </div>
+                
+                <div class="merchandise-showcase">
+                    <div class="merchandise-item">
+                        <img src="https://assets-persist.lovart.ai/agent_images/83278b16-7ca2-4f30-a606-515a61ee84a3.png" alt="Keny Enamel Brooch">
+                        <div class="merchandise-badge">Featured Item</div>
+                    </div>
+                    <div class="merchandise-item">
+                        <img src="https://assets-temp.lovart.ai/img/f9ebb4b21df045a3ba522299f0fb9368/e44c664d3719908254fbdf39e62c8a356b02b0efdf8f20bd9456bcc00a15b69c.png" alt="Keny Character Artwork">
+                        <div class="merchandise-badge">Collector Art</div>
+                    </div>
+                    <div class="merchandise-item"><img src="image (13).png" alt="Keny Merchandise 13"></div>
+                    <div class="merchandise-item"><img src="image (14).png" alt="Keny Merchandise 14"></div>
+                    <div class="merchandise-item"><img src="image (15).png" alt="Keny Merchandise 15"></div>
+                    <div class="merchandise-item"><img src="image (16).png" alt="Keny Merchandise 16"></div>
+                    <div class="merchandise-item"><img src="image (17).png" alt="Keny Merchandise 17"></div>
+                    <div class="merchandise-item"><img src="image (18).png" alt="Keny Merchandise 18"></div>
+                    <div class="merchandise-item"><img src="image (19).png" alt="Keny Merchandise 19"></div>
+                    <div class="merchandise-item"><img src="image (20).png" alt="Keny Merchandise 20"></div>
+                    <div class="merchandise-item"><img src="image (21).png" alt="Keny Merchandise 21"></div>
+                    <div class="merchandise-item"><img src="image (22).png" alt="Keny Merchandise 22"></div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Footer -->
+        <footer>
+            <div class="footer-container">
+                <div class="footer-logo">
+                    <h2><i class="ri-feather-fill"></i> Keny the Hornbill</h2>
+                    <p>Bringing the spirit of Sarawak to life through storytelling, adventure, and cultural celebration. Join Keny on a journey through the heart of Borneo.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#animation">Animation Concept</a></li>
+                        <li><a href="#character">Character Profile</a></li>
+                        <li><a href="#culture">Cultural Symbolism</a></li>
+                        <li><a href="#merchandise">Merchandise</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <div class="contact-info">
+                        <i class="ri-mail-line"></i>
+                        <p>info@kenythehornbill.com</p>
+                    </div>
+                    <div class="contact-info">
+                        <i class="ri-phone-line"></i>
+                        <p>+60 12 345 6789</p>
+                    </div>
+                    <div class="contact-info">
+                        <i class="ri-map-pin-line"></i>
+                        <p>Kuching, Sarawak, Malaysia</p>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="#"><i class="ri-facebook-fill"></i></a>
+                        <a href="#"><i class="ri-instagram-line"></i></a>
+                        <a href="#"><i class="ri-youtube-fill"></i></a>
+                        <a href="#"><i class="ri-twitter-x-line"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Keny the Sarawak Hornbill. All Rights Reserved.</p>
+            </div>
+        </footer>
+    </div>
+    <script>
+        (function() {
+            var selectors = [
+                '.hero-content',
+                '.concept-text',
+                '.concept-frame',
+                '.profile-image img',
+                '.profile-text',
+                '.section-title',
+                '.feature',
+                '.symbolism-item',
+                '.appeal-card',
+                '.chart-quadrant',
+                '.merchandise-item'
+            ];
+
+            var elements = Array.prototype.slice.call(document.querySelectorAll(selectors.join(', ')));
+            elements.forEach(function(el, index) {
+                el.classList.add('reveal');
+                el.style.transitionDelay = (Math.min(index, 8) * 40) + 'ms';
+            });
+
+            var observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.12 });
+
+            elements.forEach(function(el) { observer.observe(el); });
+        })();
+    </script>
+</body>
+</html>
